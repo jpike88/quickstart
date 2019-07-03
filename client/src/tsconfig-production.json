@@ -1,0 +1,35 @@
+{
+  "compileOnSave": true,
+  "angularCompilerOptions": {
+    "enableIvy": true
+  },
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "incremental": true,
+    "importHelpers": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "sourceMap": true,
+    "noEmitHelpers": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "outDir": "../../dist/",
+    "baseUrl": "./",
+    "paths": {
+      "@client/*": ["./components/*"],
+      "@shared/*": [
+        "./../../shared/*"
+      ]
+    }
+  },
+  "exclude": ["./../node_modules"]
+}

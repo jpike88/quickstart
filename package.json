@@ -1,33 +1,23 @@
 {
-  "name": "angular-quickstart",
+  "name": "quickstart",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
-  "scripts": {
-    "build": "tsc -p src/",
-    "build:watch": "tsc -p src/ -w",
-    "build:e2e": "tsc -p e2e/",
-    "serve": "lite-server -c=bs-config.json",
-    "serve:e2e": "lite-server -c=bs-config.e2e.json",
-    "prestart": "npm run build",
-    "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
-    "pree2e": "npm run build:e2e",
-    "e2e": "concurrently \"npm run serve:e2e\" \"npm run protractor\" --kill-others --success first",
-    "preprotractor": "webdriver-manager update",
-    "protractor": "protractor protractor.config.js",
-    "pretest": "npm run build",
-    "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
-    "pretest:once": "npm run build",
-    "test:once": "karma start karma.conf.js --single-run",
-    "lint": "tslint ./src/**/*.ts -t verbose"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
-    "@angular/core": "^8.0.3"
-  },
-  "devDependencies": {
     "typescript": "^3.5.2"
   },
-  "repository": {}
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpike88/quickstart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpike88/quickstart/issues"
+  },
+  "homepage": "https://github.com/jpike88/quickstart#readme"
 }

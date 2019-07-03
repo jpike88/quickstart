@@ -1,0 +1,150 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"launch": {
+		"configurations": [
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Server",
+				"windows": {
+					"program": "${workspaceRoot}\\server\\dist\\_server_entry.js",
+					"cwd": "${workspaceRoot}\\server",
+				},
+				"program": "${workspaceRoot}/server/dist/_server_entry.js",
+				"cwd": "${workspaceRoot}/server",
+				"env": {
+					"FORCE_COLOR": "true"
+				},
+				"sourceMapPathOverrides": {
+					"/src/server/src/*": "${workspaceRoot}/server/src/*"
+				}
+			},
+			{
+				"name": "Client",
+				"type": "chrome",
+				"request": "launch",
+				"url": "http://localhost:4444",
+				"sourceMapPathOverrides": {
+					"/src/client/src/*": "${workspaceRoot}/client/src/*"
+				}
+			},
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Server (Seed)",
+				"windows": {
+					"program": "${workspaceRoot}\\server\\dist\\_server_entry.js",
+					"cwd": "${workspaceRoot}\\server",
+				},
+				"program": "${workspaceRoot}/server/dist/_server_entry.js",
+				"cwd": "${workspaceRoot}/server",
+				"env": {
+					"TARGET_DATABASE": "seed_dev",
+					"FORCE_COLOR": "true"
+				},
+				"sourceMapPathOverrides": {
+					"/aquipa/*": "${workspaceRoot}/*"
+				}
+			},
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Seed",
+				"program": "${workspaceRoot}/seed/dist/classic/_server_entry.js",
+				"cwd": "${workspaceRoot}/seed/",
+				"env": {
+					"TARGET_DATABASE": "seed_dev",
+					"FORCE_COLOR": "true"
+				},
+				"sourceMapPathOverrides": {
+					"*": "${workspaceRoot}/*"
+				}
+			},
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Fuse Production",
+				"program": "${workspaceRoot}/fuse.js",
+				"cwd": "${workspaceRoot}/",
+				"env": {
+					"FORCE_COLOR": "true"
+				},
+				"args": [
+					"production-serve"
+				]
+			}
+		]
+	},
+	"settings": {
+		"debug.inlineValues": true,
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"files.exclude": {
+			"**/.*": true,
+			"**/*.eot": true,
+			"**/*.jpeg": true,
+			"**/*.jpg": true,
+			"**/*.js.map": true,
+			"**/*.pdf": true,
+			"**/*.ttf": true,
+			"**/*.woff": true,
+			"**/assets": true,
+			"**/certs": true,
+			"**/cordova": true,
+			"**/decl": true,
+			"**/dist": true,
+			"**/exampleConfig.json": true,
+			"**/lib": true,
+			"**/node_modules": true,
+			"**/package-lock.json": true,
+			"**/scripts": true,
+			"**/seed-dist": true,
+			"**/src/**/*.js": true,
+			"**/tmp": true,
+			"**/utility_scripts": true
+		},
+		"search.exclude": {
+			"**/.*": true,
+			"server/seed/**/api.ts": true,
+			"client/**/api.ts": true,
+			"**/tmp": true,
+			"**/dist": true,
+			"**/node_modules": true,
+			"**/lib": true,
+			"**/seed-dist": true,
+			"**/assets": true,
+			"**/certs": true,
+			"**/decl": true,
+			"**/scripts": true,
+			"**/package-lock.json": true,
+			"**/package.json": true,
+			"**/exampleConfig.json": true,
+			"**/cordova": true,
+			"**/utility_scripts": true,
+			"**/*.woff": true,
+			"**/*.eot": true,
+			"**/*.ttf": true
+		},
+		"editor.fontSize": 14,
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#286303",
+			"titleBar.inactiveBackground": "#1e4a02",
+			"titleBar.activeForeground": "#eee",
+			"titleBar.inactiveForeground": "#aaa"
+		},
+		"editor.snippetSuggestions": "top",
+		"editor.autoIndent": true,
+		"workbench.editor.enablePreviewFromQuickOpen": false,
+		"breadcrumbs.enabled": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.tslint": true
+		},
+		"typescript.preferences.importModuleSpecifier": "non-relative",
+		"search.usePCRE2": true,
+		"javascript.preferences.importModuleSpecifier": "non-relative",
+		"editor.formatOnSave": true
+	}
+}

@@ -1,0 +1,34 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "emitDecoratorMetadata": true,
+    "outDir": "../dist",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmitHelpers": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "paths": {
+      "@client/*": [
+        "./components/*"
+      ],
+      "@shared/*": [
+        "./../../shared/*"
+      ]
+    }
+  },
+  "exclude": [
+    "./../node_modules"
+  ]
+}
